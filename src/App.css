@@ -1,42 +1,103 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+
+/* APP */
+.container {
+    align-items: center;
+    color: white;
+    background-color: rgb(9 9 11);
+    display: flex;
+    flex-direction: column;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.div-tracker {
+    max-width: 500px;
+    width: 90%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* IncomeExpenses */
+.income-info {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.expense-info {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
 }
 
-.card {
-  padding: 2em;
+/* Balance */
+.div-balance {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.div-balance h1 {
+    font-weight: bold;
 }
 
-.read-the-docs {
-  color: #888;
+/* TransactionForm */
+.input-description {
+    background-color: rgb(82, 82, 91);
+    border-radius: 0.5rem;
+    display: block;
+    width: 100%;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+}
+.input-amount {
+    background-color: rgb(82, 82, 91);
+    border-radius: 0.5rem;
+    display: block;
+    width: 100%;
+    color: white;
+    padding: 5px;
+    margin: 5px 0;
+    font-size: 20px;
+}
+.button-form {
+    background-color: rgb(67, 56, 202);
+    color: white;
+    padding: 5px;
+    width: 100%;
+    border-radius: 0.5rem;
+    display: block;
+    margin-top: 5px;
+}
+
+/* TransactionList */
+.list-title {
+    width: 100%;
+    font-weight: bold;
+}
+
+/* TransactionItem */
+.list-items {
+    background-color: rgb(82, 82, 91);
+    padding: 10px;
+    border-radius: 0.5rem;
+    margin-bottom: 0.2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.amount-item {
+    font-size: 25px;
+}
+.item-button {
+    padding: 10px;
+    border-radius: 0.5rem;
+    background-color: rgb(9 9 11);
+    color: white;
+    margin: 0 3px;
+}
+
+@media (min-width: 768px) {
+
 }
