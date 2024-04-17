@@ -10,20 +10,7 @@ import './App.css'
 
 function App() {
   return (
-    <GlobalProvider>
-          <div className='container'>
-            <div className='div-tracker'>
-              <h1>Expense Tracker</h1>
-              <IncomeExpenses />
-              <Balance />
-              <TransactionForm />
-            </div>
-            <div>
-              <ExpenseChart />
-              <TransactionList /> 
-            </div>
-          </div>
-    </GlobalProvider>
+    <h1>Hola</h1>
   )
 }
 
