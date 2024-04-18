@@ -16,12 +16,13 @@ function ExpenseChart() {
     const totalExpensesPercentage = Math.round((egresos / ingresos) * 100);
     const totalIncomePercentage = 100 - totalExpensesPercentage;
 
+
     return (
         <VictoryPie
             colorScale={["#e74c3c", "#2ecc71"]}
             data={[
-                { x: "Expenses", y: totalExpensesPercentage },
-                { x: "Incomes", y: totalIncomePercentage },
+                { x: "Expenses", y: totalExpensesPercentage ? totalExpensesPercentage : 0 },
+                { x: "Incomes", y: totalIncomePercentage ? totalIncomePercentage : 0 },
             ]}
             animate={{
                 duration: 200
