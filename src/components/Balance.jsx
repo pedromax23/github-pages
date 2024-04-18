@@ -1,18 +1,25 @@
-import {useGlobalState} from '../context/GlobalState.jsx'
+import { useCuentaContext } from "../CuentaProvider"
 
 function Balance() {
 
-    const {transactions} = useGlobalState()
+  const cuenta = useCuentaContext();
+  
+  const ingresos = cuenta.filter((registro) => registro.monto > 0)
+  const egresos = cuenta.filter((registro) => registro.monto < 0)
 
-    const amounts = transactions.map(transaction => transaction.amount)
-    const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2)
+  const totalIngresos = ingresos.reduce((acc, valor) => acc + valor.monto, 0)
+  const totalEgresos = egresos.reduce((acc, valor) => acc + valor.monto, 0)
 
-    return (
-        <div className='div-balance'>
-            <h3>Your Balance</h3>
-            <h1>${total}</h1>
-        </div>
-    )
-} 
+  const total = (totalIngresos + totalEgresos)
 
-export default Balance;
+  return (
+    <>
+    <div className="div-balance">
+      <h3>Balance</h3>
+      <h1>${total}</h1>
+    </div>
+    </>
+  )
+}
+
+export default Balance
